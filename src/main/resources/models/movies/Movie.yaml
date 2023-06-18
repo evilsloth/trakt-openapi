@@ -1,0 +1,12 @@
+type: object
+properties:
+  title:
+    type: string
+  year:
+    type: integer
+  ids:
+    $ref: ../common/Ids.yaml
+required:
+  - title
+  - year
+  - ids

@@ -1,0 +1,15 @@
+type: object
+properties:
+  season:
+    type: integer
+  number:
+    type: integer
+  title:
+    type: string
+  ids:
+    $ref: ../common/Ids.yaml
+required:
+  - season
+  - number
+  - title
+  - ids

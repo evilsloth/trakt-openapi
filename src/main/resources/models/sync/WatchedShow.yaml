@@ -1,0 +1,17 @@
+type: object
+properties:
+  plays:
+    type: integer
+  last_watched_at:
+    type: string
+  last_updated_at:
+    type: string
+  reset_at:
+    type: string
+  show:
+    $ref: ../shows/Show.yaml
+required:
+  - plays
+  - last_watched_at
+  - last_updated_at
+  - show

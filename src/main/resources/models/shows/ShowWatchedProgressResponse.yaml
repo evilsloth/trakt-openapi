@@ -1,0 +1,17 @@
+type: object
+properties:
+  aired:
+    type: integer
+  completed:
+    type: integer
+  last_watched_at:
+    type: string
+  reset_at:
+    type: string
+  next_episode:
+    $ref: ../episodes/Episode.yaml
+  last_episode:
+    $ref: ../episodes/Episode.yaml
+required:
+  - aired
+  - completed

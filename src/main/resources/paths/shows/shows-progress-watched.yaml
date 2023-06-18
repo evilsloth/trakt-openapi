@@ -1,0 +1,37 @@
+get:
+  tags:
+    - shows
+  description: Returns watched progress for a show including details on all aired seasons and episodes.
+  operationId: getShowWatchedProgress
+  parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+      description: Trakt ID, Trakt slug, or IMDB ID.
+    - in: query
+      name: hidden
+      required: false
+      schema:
+        type: boolean
+      description: Include any hidden seasons (defaults to false).
+    - in: query
+      name: specials
+      required: false
+      schema:
+        type: boolean
+      description: Include specials as season 0 (defaults to false).
+    - in: query
+      name: count_specials
+      required: false
+      schema:
+        type: boolean
+      description: Count specials in the overall stats (only applies if specials are included, defaults to false).
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/shows/ShowWatchedProgressResponse.yaml

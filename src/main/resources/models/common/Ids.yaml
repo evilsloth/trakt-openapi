@@ -1,0 +1,12 @@
+type: object
+properties:
+  trakt:
+    type: integer
+  slug:
+    type: string
+  imdb:
+    type: string
+  tmdb:
+    type: integer
+required:
+  - trakt

@@ -1,0 +1,41 @@
+type: object
+properties:
+  tagline:
+    type: string
+  overview:
+    type: string
+  year:
+    type: integer
+  released:
+    type: string
+  runtime:
+    type: integer
+  country:
+    type: string
+  updated_at:
+    type: string
+  trailer:
+    type: string
+  homepage:
+    type: string
+  status:
+    type: string
+  rating:
+    type: number
+    format: double
+  votes:
+    type: integer
+  comment_count:
+    type: integer
+  language:
+    type: string
+  available_translations:
+    type: array
+    items:
+      type: string
+  genres:
+    type: array
+    items:
+      type: string
+  certification:
+    type: string

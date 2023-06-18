@@ -1,0 +1,23 @@
+get:
+  tags:
+    - sync
+  description: Returns all items in a user's watchlist filtered by type.
+  operationId: getWatchlistMovies
+  parameters:
+    - in: path
+      name: sort
+      schema:
+        type: string
+        enum:
+          - rank
+          - added
+          - released
+          - title
+      description: How to sort
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/sync/WatchlistMoviesResponse.yaml

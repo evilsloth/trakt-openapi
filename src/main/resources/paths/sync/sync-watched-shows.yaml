@@ -1,0 +1,22 @@
+get:
+  tags:
+    - sync
+  description: Returns all shows a user has watched sorted by most plays.
+  operationId: getWatchedShows
+  parameters:
+    - in: query
+      name: extended
+      style: form
+      explode: false
+      schema:
+        type: string
+        enum:
+          - full
+          - noseasons
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/sync/WatchedShowsResponse.yaml

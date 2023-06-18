@@ -1,0 +1,21 @@
+post:
+  tags:
+    - auth
+  description: |
+    Generate new codes to start the device authentication process.
+    The device_code and interval will be used later to poll for the access_token.
+    The user_code and verification_url should be presented to the user as mentioned in the flow steps above.
+  operationId: generateDeviceCode
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/auth/GenerateDeviceCodeRequest.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/auth/GenerateDeviceCodeResponse.yaml

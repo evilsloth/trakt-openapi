@@ -1,0 +1,7 @@
+type: object
+properties:
+  client_id:
+    type: string
+    description: Get this from your app settings.
+required:
+  - client_id

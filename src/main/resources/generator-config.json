@@ -1,0 +1,5 @@
+{
+  "pubName": "trakt_api",
+  "pubVersion": "1.0.0",
+  "pubDescription": "Trakt OpenAPI API client"
+}

@@ -1,0 +1,40 @@
+openapi: 3.0.1
+info:
+  title: Trakt api
+  version: 1.0.0
+servers:
+  - url: https://api.trakt.tv
+security:
+  - bearerAuth: []
+    trakt-api-key: []
+    trakt-api-version: []
+
+paths:
+  /oauth/device/code:
+    $ref: ./paths/auth/oauth-device-code.yaml
+  /oauth/device/token:
+    $ref: ./paths/auth/oauth-device-token.yaml
+  /movies/{id}:
+    $ref: ./paths/movies/movie-summary.yaml
+  /shows/{id}/progress/watched:
+    $ref: ./paths/shows/shows-progress-watched.yaml
+  /sync/watchlist/movies/{sort}:
+    $ref: ./paths/sync/sync-watchlist-movies.yaml
+  /sync/watchlist/shows/{sort}:
+    $ref: ./paths/sync/sync-watchlist-shows.yaml
+  /sync/watched/shows:
+    $ref: ./paths/sync/sync-watched-shows.yaml
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+    trakt-api-key:
+      type: apiKey
+      in: header
+      name: trakt-api-key
+    trakt-api-version:
+      type: apiKey
+      in: header
+      name: trakt-api-version

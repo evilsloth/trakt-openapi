@@ -1,0 +1,18 @@
+type: object
+properties:
+  device_code:
+    type: string
+  user_code:
+    type: string
+  verification_url:
+    type: string
+  expires_in:
+    type: integer
+  interval:
+    type: integer
+required:
+  - device_code
+  - user_code
+  - verification_url
+  - expires_in
+  - interval
