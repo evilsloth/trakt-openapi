@@ -1,0 +1,25 @@
+get:
+  tags:
+    - shows
+  description: Returns a single shows's details.
+  operationId: getShowSummary
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+      description: Trakt ID, Trakt slug, or IMDB ID
+    - in: query
+      name: extended
+      required: false
+      schema:
+        type: string
+        enum:
+          - full
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/shows/ShowSummary.yaml

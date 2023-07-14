@@ -1,13 +1,17 @@
 type: object
 properties:
-  tagline:
-    type: string
   overview:
     type: string
-  released:
+  first_aired:
     type: string
+  airs:
+    $ref: ./ShowAirsTime.yaml
   runtime:
     type: integer
+  certification:
+    type: string
+  network:
+    type: string
   country:
     type: string
   updated_at:
@@ -35,5 +39,5 @@ properties:
     type: array
     items:
       type: string
-  certification:
-    type: string
+  aired_episodes:
+    type: integer

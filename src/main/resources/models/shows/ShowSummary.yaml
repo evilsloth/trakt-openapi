@@ -1,0 +1,4 @@
+type: object
+allOf:
+  - $ref: ./Show.yaml
+  - $ref: ./ShowExtendedProperties.yaml

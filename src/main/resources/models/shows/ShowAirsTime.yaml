@@ -1,0 +1,12 @@
+type: object
+properties:
+  day:
+    type: string
+  time:
+    type: string
+  timezone:
+    type: string
+required:
+  - day
+  - time
+  - timezone

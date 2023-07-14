@@ -16,6 +16,8 @@ paths:
     $ref: ./paths/auth/oauth-device-token.yaml
   /movies/{id}:
     $ref: ./paths/movies/movie-summary.yaml
+  /shows/{id}:
+    $ref: ./paths/shows/show-summary.yaml
   /shows/{id}/progress/watched:
     $ref: ./paths/shows/shows-progress-watched.yaml
   /sync/watchlist/movies/{sort}:
